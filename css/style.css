@@ -37,3 +37,8 @@ body{
     min-height: 100%;
     overflow: hidden;
 }
+
+._container {
+    max-width: 1321px;
+    margin: 0 auto;
+}
