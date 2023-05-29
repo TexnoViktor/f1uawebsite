@@ -105,9 +105,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# Часовий пояс
+TIME_ZONE = 'Europe/Kiev'
+# Мова
+LANGUAGE_CODE = 'uk'
+# Мови що підтримуються
+LANGUAGES = (
+    ('en', 'English'),
+    ('ru', 'Russian'),
+    ('uk', 'Ukrainian'),
+)
 
 USE_I18N = True
 
