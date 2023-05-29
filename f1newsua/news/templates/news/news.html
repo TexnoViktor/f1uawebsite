@@ -6,46 +6,12 @@
             <div class="main__container">
                 <div class="news">
                     <h1 class="news__heading">Новини Формули-1</h1>
+                    {% for el in news_arr %}
                     <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/wiliams_1sec.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Після зими Вільямс Ф1 поступається Астон мартін лише секундою - Албон</a>
+                        <img src="{{ el.photolink_1.url }}" alt="" class="news__img__main">
+                        <a href="" class="news__caption__main">{{ el.title }}</a>
                     </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/mercs_123.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Mercedes обіцяє не "показувати пальцем", незважаючи на шкоду, заподіяну формі Формули-1</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/red_bull_button.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Баттон: Ф1-2023 не буде "прогулянкою в парку" для Ферстаппена і Red Bull</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/historic.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Рейтинг! 10 найкращих довоєнних автомобілів Гран-прі</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/ver_challenge.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Ферстаппен скептично ставиться до випробувань у форматі кваліфікації Ф1</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/Alfa_flour.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Таємнича стартова підлога Alfa Romeo F1 2023 виявилася повною підробкою</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/Alpine_tru_temp.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Alpine "не знає справжнього темпу" після неспокійного уїк-енду Формули-1 в Бахрейні</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/mclaren_new_aero.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">McLaren призначив червневу дату для використання нової аеродинамічної труби F1</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/ferrari_rear_wing.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Ferrari наполягатиме на "складному" одноопорному задньому антикрилі Формули-1</a>
-                    </div>
-                    <div class="news__block__main">
-                        <img src="../../../main/static/main/img/news_img/aston_red_bull.png" alt="" class="news__img__main">
-                        <a href="../../../main/templates/main/example.html" class="news__caption__main">Aston Martin: Відставання Формули-1 від Red Bull після подіуму в Бахрейні "все ще значне"</a>
-                    </div> 
+                    {% endfor %}
                 </div>
             </div>
         </main>
