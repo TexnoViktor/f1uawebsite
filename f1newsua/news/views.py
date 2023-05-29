@@ -4,7 +4,6 @@ from django.views.generic import DetailView
 
 def news(request):
     news_arr = Article.objects.all()
-
     return render(request, 'news/news.html', {'news_arr': news_arr})
 
 
