@@ -23,7 +23,7 @@
                 <div class="header__menu menu">
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li class="menu__item"><a href="news.html" class="menu__link">НОВИНИ</a></li>
+                            <li class="menu__item"><a href="{% url 'news' %}" class="menu__link">НОВИНИ</a></li>
                             <li class="menu__item"><a href="{% url 'schedule' %}" class="menu__link">РОЗКЛАД</a></li>
                             <li class="menu__item"><a href="{% url 'teams' %}" class="menu__link">КОМАНДИ</a></li>
                             <li class="menu__item"><a href="{% url 'drivers' %}" class="menu__link">ВОДІЇ</a></li>
@@ -44,7 +44,7 @@
                 <div class="footer__bar">
                     <img src="{% static 'main/img/logo.svg' %}" alt="logo" class="footer__logo">
                     <div class="footer__menu">
-                        <a href="news.html" class="menu__link">НОВИНИ</a>
+                        <a href="{% url 'news' %}" class="menu__link">НОВИНИ</a>
                         <a href="{% url 'schedule' %}" class="menu__link">РОЗКЛАД</a>
                         <a href="{% url 'teams' %}" class="menu__link">КОМАНДИ</a>
                         <a href="{% url 'drivers' %}" class="menu__link">ВОДІЇ</a>
