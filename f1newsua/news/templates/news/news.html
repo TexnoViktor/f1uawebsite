@@ -9,7 +9,7 @@
                     {% for el in news_arr %}
                     <div class="news__block__main">
                         <img src="{{ el.photolink_1.url }}" alt="" class="news__img__main">
-                        <a href="" class="news__caption__main">{{ el.title }}</a>
+                        <a href="{% url 'news-detail' el.id %}" class="news__caption__main">{{ el.title }}</a>
                     </div>
                     {% endfor %}
                 </div>

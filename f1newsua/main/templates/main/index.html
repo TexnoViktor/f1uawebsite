@@ -9,29 +9,29 @@
             <div class="first__line">
                 <div class="news__block1">
                     <img src="{{photo1.photolink_1.url}}" alt="" class="news__img1">
-                    <a href="../../../news/templates/news/example.html" class="news__caption1">{{photo1.title}}</a>
+                    <a href="{% url 'news-detail' photo1.id %}" class="news__caption1">{{photo1.title}}</a>
                 </div>
                 <div class="news__block2">
                     <img src="{{photo2.photolink_1.url}}" alt="pirelli" class="news__img2">
-                    <a href="../../../news/templates/news/example.html" class="news__caption2">{{photo2.title}}</a>
+                    <a href="{% url 'news-detail' photo2.id %}" class="news__caption2">{{photo2.title}}</a>
                 </div>
             </div>
             <div class="second__line">
                 <div class="news__block__special">
                     <img src="{{photo2.photolink_1.url}}" alt="pirelli" class="news__img__special">
-                    <a href="../../../news/templates/news/example.html" class="news__caption__special">{{photo2.title}}</a>
+                    <a href="{% url 'news-detail' photo1.id %}" class="news__caption__special">{{photo2.title}}</a>
                 </div>
                 <div class="news__block">
                     <img src="{{photo3.photolink_1.url}}" alt="" class="news__img">
-                    <a href="../../../news/templates/news/example.html" class="news__caption">{{photo3.title}}</a>
+                    <a href="{% url 'news-detail' photo3.id %}" class="news__caption">{{photo3.title}}</a>
                 </div>
                 <div class="news__block">
                     <img src="{{photo4.photolink_1.url}}" alt="" class="news__img">
-                    <a href="../../../news/templates/news/example.html" class="news__caption">{{photo4.title}}</a>
+                    <a href="{% url 'news-detail' photo4.id %}" class="news__caption">{{photo4.title}}</a>
                 </div>
                 <div class="news__block">
                     <img src="{{photo5.photolink_1.url}}" alt="" class="news__img">
-                    <a href="../../../news/templates/news/example.html" class="news__caption">{{photo5.title}}</a>
+                    <a href="{% url 'news-detail' photo5.id %}" class="news__caption">{{photo5.title}}</a>
                 </div>
             </div>
         </div>
