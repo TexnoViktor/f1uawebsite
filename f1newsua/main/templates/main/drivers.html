@@ -1,348 +1,293 @@
-ч{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
-    <title>F1newsua</title>
-</head>
-<body>
-    <div class="wrapper">
-        <header id="open" class="header">
-            <div id="close" class="header__container">
-                <a href="#open" class="icon-menu"><span></span></a>
-                <a href="#close" class="close-icon-menu"></a>
-                <a href="index.html" class="header__logo">
-                    <img src="../../static/main/img/logo.svg" alt="logo">
-                </a>
-                <div class="header__menu menu">
-                    <nav class="menu__body">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="news.html" class="menu__link">НОВИНИ</a></li>
-                            <li class="menu__item"><a href="/schedule" class="menu__link">РОЗКЛАД</a></li>
-                            <li class="menu__item"><a href="/teams" class="menu__link">КОМАНДИ</a></li>
-                            <li class="menu__item"><a href="/drivers" class="menu__link">ВОДІЇ</a></li>
-                            <li class="menu__item"><a href="/standings" class="menu__link">ТУРНІРНА ТАБЛИЦЯ</a></li>
-                        </ul>
-                    </nav>
+{% extends 'main/layout.html' %}
+{% block content %}
+{% load static %}
+<main class="main">
+    <div class="main__container">
+        <div class="drivers">
+            <h1 class="drivers__heading">Водії</h1>
+            <div class="driver__profiles">
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/verstappen.png" alt="verstappen" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Netherlands.svg" alt="Netherlands" class="flag">
+                        <div class="circle">1</div>
+                    </div>
+                    <h2 class="profile__name">Макс Ферстаппен</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Red Bull Racing</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1997-09-30 (25 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Нідерланди</span>
+                    </div>
                 </div>
-                <a href="subscribe.html" class="header__subscribe">
-                    <img src="../../static/main/img/subscribe.svg" alt="subscribe">
-                </a>
-            </div>
-        </header>
-        <main class="main">
-            <div class="main__container">
-                <div class="drivers">
-                    <h1 class="drivers__heading">Водії</h1>
-                    <div class="driver__profiles">
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/verstappen.png" alt="verstappen" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Netherlands.svg" alt="Netherlands" class="flag">
-                                <div class="circle">1</div>
-                            </div>
-                            <h2 class="profile__name">Макс Ферстаппен</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Red Bull Racing</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1997-09-30 (25 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Нідерланди</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/sargent.png" alt="sargent" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/us.svg" alt="us" class="flag">
-                                <div class="circle">2</div>
-                            </div>
-                            <h2 class="profile__name">Логан Саржент</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Williams</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2000-12-31 (22 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">США</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/norris.png" alt="norris" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
-                                <div class="circle">4</div>
-                            </div>
-                            <h2 class="profile__name">Ландо Норріс</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">McLaren</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1999-11-13 (23 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Велика Британія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/gasly.png" alt="gasly" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/France.svg" alt="France" class="flag">
-                                <div class="circle">10</div>
-                            </div>
-                            <h2 class="profile__name">П'єр Гаслі</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alpine</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-02-07 (27 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Франція</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/perez.png" alt="perez" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Mexico.svg" alt="Mexico" class="flag">
-                                <div class="circle">11</div>
-                            </div>
-                            <h2 class="profile__name">Серхіо Перес</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Red Bull Racing</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1990-01-26 (33 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Мексика</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/alonso.png" alt="alonso" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/spain.svg" alt="spain" class="flag">
-                                <div class="circle">14</div>
-                            </div>
-                            <h2 class="profile__name">Фернандо Алонсо</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Aston Martin Racing</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1981-07-29 (41 рік)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Іспанія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/leclerc.png" alt="leclerc" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/monako.svg" alt="monako" class="flag">
-                                <div class="circle">16</div>
-                            </div>
-                            <h2 class="profile__name">Шарль Леклер</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Ferrari</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1997-10-16 (25 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Монако</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/stroll.png" alt="stroll" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/canada.svg" alt="canada" class="flag">
-                                <div class="circle">18</div>
-                            </div>
-                            <h2 class="profile__name">Ленс Стролл</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Aston Martin Racing</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1998-10-29 (24 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Канада</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/magnusen.png" alt="magnusen" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Denmark.svg" alt="Denmark" class="flag">
-                                <div class="circle">20</div>
-                            </div>
-                            <h2 class="profile__name">Кевін Магнусен</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Haas F1 Team</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1992-10-05 (30 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Данія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/vris.png" alt="vris" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Netherlands.svg" alt="Netherlands" class="flag">
-                                <div class="circle">21</div>
-                            </div>
-                            <h2 class="profile__name">Нік Де Вріз</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">AphaTauri</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1995-02-06 (28 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Нідерланди</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/tsunoda.png" alt="tsunoda" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Japan.svg" alt="Japan" class="flag">
-                                <div class="circle">22</div>
-                            </div>
-                            <h2 class="profile__name">Юкі Цунода</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">AphaTauri</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2000-05-11 (22 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Японія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/albon.png" alt="albon" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Thailand.svg" alt="Thailand" class="flag">
-                                <div class="circle">23</div>
-                            </div>
-                            <h2 class="profile__name">Алекс Албон</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Williams</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-03-23 (26 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Тайланд</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/zhoy.png" alt="zhoy" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/China.svg" alt="China" class="flag">
-                                <div class="circle">24</div>
-                            </div>
-                            <h2 class="profile__name">Джоу Гуанью</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alfa Romeo</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1999-05-30 (23 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Китай</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/Hulkenberg.png" alt="Hulkenberg" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Germany.svg" alt="Germany" class="flag">
-                                <div class="circle">27</div>
-                            </div>
-                            <h2 class="profile__name">Ніко Хулькенберг</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Haas F1 Team</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1987-08-19 (35 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Німеччина</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/Ocon.png" alt="ocon" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/France.svg" alt="France" class="flag">
-                                <div class="circle">31</div>
-                            </div>
-                            <h2 class="profile__name">Естебан Окон</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alpine</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-09-17 (26 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Франція</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/hamilton.png" alt="hamilton" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
-                                <div class="circle">44</div>
-                            </div>
-                            <h2 class="profile__name">Льюіс Хемільтон</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Mercedes</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1985-01-07 (38 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Велика Британія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/sains.png" alt="sains" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/spain.svg" alt="spain" class="flag">
-                                <div class="circle">55</div>
-                            </div>
-                            <h2 class="profile__name">Карлос Сайнс</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Ferrari</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1994-09-01 (28 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Іспанія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/russel.png" alt="russel" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
-                                <div class="circle">63</div>
-                            </div>
-                            <h2 class="profile__name">Джордж Рассел</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Mercedes</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1998-02-15 (25 років)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Велика Британія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/bottas.png" alt="bottas" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/Finland.svg" alt="Finland" class="flag">
-                                <div class="circle">77</div>
-                            </div>
-                            <h2 class="profile__name">Валтері Боттас</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alfa Romeo</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1989-08-28 (33 роки)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Фінляндія</span>
-                            </div>
-                        </div>
-                        <div class="driver__profile">
-                            <img src="../../static/main/img/profile_pics/piastry.png" alt="piastry" class="profile__photo">
-                            <div class="nationality__num">
-                                <img src="../../static/main/img/flags/astralia.svg" alt="astralia" class="flag">
-                                <div class="circle">81</div>
-                            </div>
-                            <h2 class="profile__name">Оскар Піастрі</h2>
-                            <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">McLaren</span></div>
-                            <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2001-04-06 (21 рік)</span></div>
-                            <div class="column">
-                                <span class="nationaliy">Національність: </span>
-                                <span class="country">Австралія</span>
-                            </div>
-                        </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/sargent.png" alt="sargent" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/us.svg" alt="us" class="flag">
+                        <div class="circle">2</div>
+                    </div>
+                    <h2 class="profile__name">Логан Саржент</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Williams</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2000-12-31 (22 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">США</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/norris.png" alt="norris" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
+                        <div class="circle">4</div>
+                    </div>
+                    <h2 class="profile__name">Ландо Норріс</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">McLaren</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1999-11-13 (23 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Велика Британія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/gasly.png" alt="gasly" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/France.svg" alt="France" class="flag">
+                        <div class="circle">10</div>
+                    </div>
+                    <h2 class="profile__name">П'єр Гаслі</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alpine</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-02-07 (27 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Франція</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/perez.png" alt="perez" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Mexico.svg" alt="Mexico" class="flag">
+                        <div class="circle">11</div>
+                    </div>
+                    <h2 class="profile__name">Серхіо Перес</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Red Bull Racing</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1990-01-26 (33 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Мексика</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/alonso.png" alt="alonso" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/spain.svg" alt="spain" class="flag">
+                        <div class="circle">14</div>
+                    </div>
+                    <h2 class="profile__name">Фернандо Алонсо</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Aston Martin Racing</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1981-07-29 (41 рік)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Іспанія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/leclerc.png" alt="leclerc" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/monako.svg" alt="monako" class="flag">
+                        <div class="circle">16</div>
+                    </div>
+                    <h2 class="profile__name">Шарль Леклер</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Ferrari</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1997-10-16 (25 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Монако</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/stroll.png" alt="stroll" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/canada.svg" alt="canada" class="flag">
+                        <div class="circle">18</div>
+                    </div>
+                    <h2 class="profile__name">Ленс Стролл</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Aston Martin Racing</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1998-10-29 (24 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Канада</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/magnusen.png" alt="magnusen" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Denmark.svg" alt="Denmark" class="flag">
+                        <div class="circle">20</div>
+                    </div>
+                    <h2 class="profile__name">Кевін Магнусен</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Haas F1 Team</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1992-10-05 (30 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Данія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/vris.png" alt="vris" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Netherlands.svg" alt="Netherlands" class="flag">
+                        <div class="circle">21</div>
+                    </div>
+                    <h2 class="profile__name">Нік Де Вріз</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">AphaTauri</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1995-02-06 (28 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Нідерланди</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/tsunoda.png" alt="tsunoda" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Japan.svg" alt="Japan" class="flag">
+                        <div class="circle">22</div>
+                    </div>
+                    <h2 class="profile__name">Юкі Цунода</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">AphaTauri</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2000-05-11 (22 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Японія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/albon.png" alt="albon" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Thailand.svg" alt="Thailand" class="flag">
+                        <div class="circle">23</div>
+                    </div>
+                    <h2 class="profile__name">Алекс Албон</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Williams</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-03-23 (26 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Тайланд</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/zhoy.png" alt="zhoy" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/China.svg" alt="China" class="flag">
+                        <div class="circle">24</div>
+                    </div>
+                    <h2 class="profile__name">Джоу Гуанью</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alfa Romeo</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1999-05-30 (23 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Китай</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/Hulkenberg.png" alt="Hulkenberg" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Germany.svg" alt="Germany" class="flag">
+                        <div class="circle">27</div>
+                    </div>
+                    <h2 class="profile__name">Ніко Хулькенберг</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Haas F1 Team</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1987-08-19 (35 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Німеччина</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/Ocon.png" alt="ocon" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/France.svg" alt="France" class="flag">
+                        <div class="circle">31</div>
+                    </div>
+                    <h2 class="profile__name">Естебан Окон</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alpine</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1996-09-17 (26 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Франція</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/hamilton.png" alt="hamilton" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
+                        <div class="circle">44</div>
+                    </div>
+                    <h2 class="profile__name">Льюіс Хемільтон</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Mercedes</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1985-01-07 (38 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Велика Британія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/sains.png" alt="sains" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/spain.svg" alt="spain" class="flag">
+                        <div class="circle">55</div>
+                    </div>
+                    <h2 class="profile__name">Карлос Сайнс</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Ferrari</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1994-09-01 (28 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Іспанія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/russel.png" alt="russel" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/GB.svg" alt="GB" class="flag">
+                        <div class="circle">63</div>
+                    </div>
+                    <h2 class="profile__name">Джордж Рассел</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Mercedes</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1998-02-15 (25 років)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Велика Британія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/bottas.png" alt="bottas" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/Finland.svg" alt="Finland" class="flag">
+                        <div class="circle">77</div>
+                    </div>
+                    <h2 class="profile__name">Валтері Боттас</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">Alfa Romeo</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">1989-08-28 (33 роки)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Фінляндія</span>
+                    </div>
+                </div>
+                <div class="driver__profile">
+                    <img src="../../static/main/img/profile_pics/piastry.png" alt="piastry" class="profile__photo">
+                    <div class="nationality__num">
+                        <img src="../../static/main/img/flags/astralia.svg" alt="astralia" class="flag">
+                        <div class="circle">81</div>
+                    </div>
+                    <h2 class="profile__name">Оскар Піастрі</h2>
+                    <div class="line"><span class="profile__team">Команда: </span><span class="profile__team_name">McLaren</span></div>
+                    <div class="line"><span class="born">Народився: </span><span class="date-of-birth">2001-04-06 (21 рік)</span></div>
+                    <div class="column">
+                        <span class="nationaliy">Національність: </span>
+                        <span class="country">Австралія</span>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer__bar">
-                    <img src="/main/img/logo.svg" alt="logo" class="footer__logo">
-                    <div class="footer__menu">
-                        <a href="news.html" class="menu__link">НОВИНИ</a>
-                        <a href="/schedule" class="menu__link">РОЗКЛАД</a>
-                        <a href="/teams" class="menu__link">КОМАНДИ</a>
-                        <a href="/drivers" class="menu__link">ВОДІЇ</a>
-                        <a href="/standings" class="menu__link">ТУРНІРНА ТАБЛИЦЯ</a>
-                        <a href="" class="menu__link">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
-                    </div>
-                </div>
-                <div class="footer__policy"><span class="footer__text">This website is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP,GRAND PRIX and related marks are trade marks of Formula One Licensing B.V. FOR EDUCATIONAL PURPOSES ONLY 
-                </span></div>
-            </div>
-        </footer>
+        </div>
     </div>
-    <script src="../../static/main/js/script.js"></script>
-</body>
-</html>
+</main>
+{% endblock %}
